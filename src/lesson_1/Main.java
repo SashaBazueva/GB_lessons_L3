@@ -1,6 +1,7 @@
 package lesson_1;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -27,10 +28,6 @@ public class Main {
         array.set(o2,per1);
     }
     public static <T> ArrayList<T> makeIntoArrayList (T[] array){
-        ArrayList<T> arrayCopy = new ArrayList<>(array.length);
-        for (int i = 0; i < array.length; i++) {
-            arrayCopy.add(array[i]);
-        }
-        return arrayCopy;
+        return new ArrayList<>(Arrays.asList(array));
     }
 }
