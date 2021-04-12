@@ -38,7 +38,7 @@ hs_err_pid*
 .idea/moduls.xml
 .idea/vcs.xml
 Java2.iml
-.idea/workspace.xml
+workspace.xml
 
 # Generated files
 .idea/**/contentModel.xml
