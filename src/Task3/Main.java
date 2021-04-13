@@ -6,9 +6,7 @@ import Task3.Fruit.Orange;
 public class Main {
     public static void main(String[] args) {
         Apple apple = new Apple();
-        Orange orange = new Orange();
+        Box<Apple> box = new Box<>(5, apple);
 
-        Box box = new Box(4, apple);
-        System.out.println(box.getWeight());
     }
 }
