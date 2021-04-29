@@ -10,7 +10,6 @@ public class MainClass {
     public static void main(String[] args) {
 
         CountDownLatch count = new CountDownLatch(4);
-        CyclicBarrier barrierForReady = new CyclicBarrier(4);
         CyclicBarrier barrierForStarting = new CyclicBarrier(5);
         Lock lock = new ReentrantLock();
 
@@ -18,7 +17,7 @@ public class MainClass {
         Race race = new Race(new Road(60), new Tunnel(), new Road(40));
         Car[] cars = new Car[CARS_COUNT];
         for (int i = 0; i < cars.length; i++) {
-            cars[i] = new Car(race, 20 + (int) (Math.random() * 10), count, barrierForReady, barrierForStarting, lock);
+            cars[i] = new Car(race, 20 + (int) (Math.random() * 10), count, barrierForStarting, lock);
         }
 
         for (int i = 0; i < cars.length; i++) {

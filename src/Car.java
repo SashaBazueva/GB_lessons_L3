@@ -13,12 +13,11 @@ public class Car implements Runnable {
     private int speed;
     private String name;
     private CountDownLatch count;
-    private CyclicBarrier barrierForReady;
     private CyclicBarrier barrierForStarting;
-    static volatile boolean isWinner = true;//winner of the race
+    static volatile boolean isWinner = true;//to check winner of the race
     private Lock lock;
 
-    public Car(Race race, int speed, CountDownLatch count, CyclicBarrier barrierForReady, CyclicBarrier barrierForStarting, Lock lock) {
+    public Car(Race race, int speed, CountDownLatch count, CyclicBarrier barrierForStarting, Lock lock) {
         this.race = race;
         this.speed = speed;
         CARS_COUNT++;
