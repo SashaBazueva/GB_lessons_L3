@@ -8,20 +8,20 @@ public class MainTest {
     @Test
     public void shouldDeleteAllNumbersInArrayExceptNumbersAfterLastFour() {
         int[] arr1 = {5, 3, 4, 2, 7, 6, 4, 4, 3, 1};
-        int[] result1 = {3, 1};
-        Assertions.assertArrayEquals(result1, Main.returnIntArrayAfterLast4(arr1));
+        int[] expected_result1 = {3, 1};
+        Assertions.assertArrayEquals(expected_result1, Main.returnIntArrayAfterLast4(arr1));
 
         int[] arr2 = {1, 4, 3, 5, 2, 6, 4, 4, 0, 2, 3};
-        int[] result2 = {0, 2, 3};
-        Assertions.assertArrayEquals(result2, Main.returnIntArrayAfterLast4(arr2));
+        int[] expected_result2 = {0, 2, 3};
+        Assertions.assertArrayEquals(expected_result2, Main.returnIntArrayAfterLast4(arr2));
 
         int[] arr3 = {4, 4, 2, 5, 4, 3, 6, 4, 0, 8, 1};
-        int[] result3 = {0, 8, 1};
-        Assertions.assertArrayEquals(result3, Main.returnIntArrayAfterLast4(arr3));
+        int[] expected_result3 = {0, 8, 1};
+        Assertions.assertArrayEquals(expected_result3, Main.returnIntArrayAfterLast4(arr3));
 
         int[] arr4 = {4, 4, 4, 4, 4, 4};
-        int[] result4 = new int[0];
-        Assertions.assertArrayEquals(result4, Main.returnIntArrayAfterLast4(arr4));
+        int[] expected_result4 = new int[0];
+        Assertions.assertArrayEquals(expected_result4, Main.returnIntArrayAfterLast4(arr4));
     }
 
     @Test
