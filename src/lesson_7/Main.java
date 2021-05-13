@@ -11,7 +11,7 @@ public class Main {
         for (int i = 0; i < arrayOfNumbers.length - 1; i++) {
             System.out.print(arrayOfNumbers[i] + ", ");
         }
-        System.out.print(arrayOfNumbers[arrayOfNumbers.length - 1] + " } ");
+        System.out.println(arrayOfNumbers[arrayOfNumbers.length - 1] + " } ");
     }
 
     @Test
